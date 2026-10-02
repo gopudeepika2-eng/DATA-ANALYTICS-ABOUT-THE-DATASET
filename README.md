@@ -1,247 +1,195 @@
-# DATA ANALYTICS ABOUT THE DATASET
+[[# DATA-ANALYTICS-ABOUT-THE-DATASET
+# 1. AIM
+To perform data analytics on a given dataset using Python and Pandas, understand the characteristics of the dataset, identify different types of data, examine missing values, and prepare the dataset for further analysis and machine learning.
 
-## AIM
-
-To perform data analytics on a given dataset using **Python and Pandas**, understand the characteristics of the dataset, identify different types of data, examine missing values, and prepare the dataset for further analysis and machine learning.
-
----
-
-## INTRODUCTION
-
-**Data Analytics** is the process of examining, cleaning, transforming, and interpreting data to discover useful information, patterns, trends, and relationships.
-
-A dataset generally consists of:
-
-* **Rows** – Individual observations or records.
-* **Columns** – Attributes or features describing each record.
-* **Numerical Data** – Data represented using numbers.
-* **Categorical Data** – Data represented using categories or labels.
-
+# 2. INTRODUCTION
+Data Analytics is the process of examining, cleaning, transforming, and interpreting data to discover useful information, patterns, and relationships.
+A dataset usually contains:
+•	Rows – individual observations or records. 
+•	Columns – attributes or features describing each record. 
+•	Numerical data – values represented by numbers. 
+•	Categorical data – values represented by categories or labels. 
 In this experiment, the dataset contains information about customers and their purchasing behavior. The four attributes are:
+Country, Age, Salary, and Purchased.
+The uploaded notebook shows that the dataset contains 10 records and 4 columns. 
 
-| Attribute   | Description                                          |
-| ----------- | ---------------------------------------------------- |
-| `Country`   | Country of the customer                              |
-| `Age`       | Age of the customer                                  |
-| `Salary`    | Salary of the customer                               |
-| `Purchased` | Indicates whether the customer purchased the product |
-
-The dataset contains **10 records and 4 columns**.
-
----
-
-## THEORY
-
-### 1. What is Data Analytics?
-
-Data Analytics is the systematic process of collecting, examining, cleaning, transforming, and interpreting data to obtain meaningful information and support decision-making.
-
-The general data analytics workflow is:
-
-**Data Collection → Data Understanding → Data Cleaning → Data Transformation → Data Analysis → Interpretation**
-
+# 3. THEORY
+3.1 What is Data Analytics?
+Data Analytics is the systematic process of studying data to obtain meaningful information.
+The general data analytics process is:
+Data Collection → Data Understanding → Data Cleaning → Data Transformation → Data Analysis → Interpretation
 For example, an e-commerce company may collect customer information such as:
+•	Country 
+•	Age 
+•	Salary 
+•	Product purchased 
+By analyzing this information, the company can identify customer purchasing patterns.
 
-* Country
-* Age
-* Salary
-* Purchase status
+# 4. DATASET
+A dataset is a collection of related data organized in the form of rows and columns. It is used to store, analyze, and understand information. In this experiment, the dataset contains customer details such as Country, Age, Salary, and Purchased.
 
-By analyzing these attributes, the company can identify customer purchasing patterns and understand the factors that influence purchasing decisions.
+# Publicly Available Dataset
 
----
+•	A publicly available dataset is a collection of data that is made accessible to students, researchers, developers, or the general public. 
 
-## DATASET
+•	It can usually be downloaded or accessed online for analysis and research.
 
-A **dataset** is a structured collection of related data organized into rows and columns. Datasets are widely used in data analytics, data science, machine learning, artificial intelligence, and research.
+•	Public datasets are commonly used for:
 
-In this experiment, the dataset contains customer-related information such as:
+o	Data Analytics
 
-* Country
-* Age
-* Salary
-* Purchased
+o	Data Science 
 
-### Dataset Characteristics
+o	Machine Learning 
 
-| Property               |              Value |
-| ---------------------- | -----------------: |
-| Number of Records      |                 10 |
-| Number of Attributes   |                  4 |
-| Categorical Attributes | Country, Purchased |
-| Numerical Attributes   |        Age, Salary |
+o	Artificial Intelligence
 
----
+o	Research
 
-## TYPES OF DATASETS
+o	Laboratory experiments
 
-### 1. Publicly Available Dataset
+# Public datasets may be available in formats such as: 
+o	CSV
 
-A **publicly available dataset** is a collection of data made accessible to students, researchers, developers, and the general public. These datasets can usually be downloaded or accessed online for analysis and research.
+o	Excel 
 
-Public datasets are commonly used for:
+o	JSON
 
-* Data Analytics
-* Data Science
-* Machine Learning
-* Artificial Intelligence
-* Research
-* Academic Laboratory Experiments
+o	XML
 
-Common dataset formats include:
+o	Text 
 
-* CSV
-* Excel
-* JSON
-* XML
-* Text
-* Images
-* Audio
+o	Images
 
-### Examples of Public Dataset Sources
+o	Audio
 
-* **UCI Machine Learning Repository**
-* **Kaggle**
-* **Government Open Data Portals**
-* **Google BigQuery Public Datasets**
-* **India's Open Government Data Platform (data.gov.in)**
+# Examples of public dataset sources: 
 
-India's Open Government Data Platform provides publicly accessible datasets covering areas such as education, healthcare, environment, economy, science, and technology.
+o	UCI Machine Learning Repository
 
-### Examples of Public Datasets
+o	Kaggle 
 
-* **Iris Dataset** – Flower classification
-* **Heart Disease Dataset** – Healthcare analysis
-* **Student Performance Dataset** – Educational analytics
-* **Online Retail Dataset** – Customer purchasing analysis
-* **Weather Dataset** – Environmental analysis
+o	Government Open Data Portals
 
-Public datasets are useful because they allow students and researchers to practice data analysis without having to collect data manually.
+o	Google BigQuery Public Datasets 
 
----
+# India's Open Government Data Platform (data.gov.in) provides publicly accessible datasets in areas such as education, health, environment, economy, and science and technology.
 
-## 2. Real-Time Dataset
+•	Public datasets are useful because they allow students to practice analytics without collecting data themselves.
 
-A **real-time dataset** contains data that is continuously generated or collected from real-world systems. The data is made available for processing and analysis immediately or with very little delay.
+•	Examples:
 
-Real-time data is commonly generated by:
+o	Iris Dataset – flower classification
 
-* Sensors
-* IoT devices
-* Mobile applications
-* GPS devices
-* Smart meters
-* Websites
-* Financial systems
-* Medical devices
+o	Heart Disease Dataset – healthcare analysis
 
-Real-time datasets continuously change as new observations are generated and are commonly used for **monitoring, prediction, automation, and real-time decision-making**.
+o	Student Performance Dataset – education analytics
 
-### Examples of Real-Time Data
+o	Online Retail Dataset – customer purchasing analysis
 
-#### Smart Traffic
+o	Weather Dataset – environmental analysis
 
-* Vehicle speed
-* Vehicle count
-* Traffic density
-* Vehicle location
+# Real-Time Dataset
 
-#### Smart Grid
+•	A real-time dataset contains data that is generated or collected continuously from a real-world system
 
-* Electricity consumption
-* Voltage
-* Current
-* Power usage
-* Smart-meter readings
+•	The data is made available for processing and analysis immediately or with very little delay after it is generated. 
 
-#### Healthcare
+•	Real-time data is often produced by: 
 
-* Heart rate
-* Blood pressure
-* Body temperature
-* Oxygen level
+o	Sensors 
 
-#### Weather Monitoring
+o	IoT devices 
 
-* Temperature
-* Humidity
-* Rainfall
-* Wind speed
+o	Mobile applications 
 
-#### Banking
+o	GPS devices 
 
-* Financial transactions
-* Payments
-* Account activity
+o	Smart meters 
 
-#### E-Commerce
+o	Websites 
 
-* Customer clicks
-* Product views
-* Orders
-* Purchases
+o	Financial systems 
 
-#### Transportation
+o	Medical devices 
 
-* Vehicle location
-* Speed
-* Travel time
-* Traffic conditions
+•	Real-time data can continuously change as new observations arrive. 
 
----
+•	It is commonly used for real-time monitoring, prediction, and decision-making. 
 
-## PYTHON AND PANDAS
+# Examples
 
-Python provides several powerful libraries for data analytics. One of the most widely used libraries is **Pandas**, which provides data structures and functions for manipulating and analyzing structured data.
+•	Smart Traffic 
 
-Typical operations performed using Pandas include:
+o	Vehicle speed 
 
-* Loading datasets
-* Inspecting dataset structure
-* Identifying data types
-* Detecting missing values
-* Cleaning data
-* Filtering records
-* Performing statistical analysis
-* Preparing data for machine learning
+o	Vehicle count 
 
-Example:
+o	Traffic density 
 
-```python
-import pandas as pd
+o	Location 
 
-dataset = pd.read_csv("Data.csv")
+•	Smart Grid 
 
-print(dataset.head())
-print(dataset.shape)
-print(dataset.info())
-print(dataset.isnull().sum())
-```
+o	Electricity consumption 
 
----
+o	Voltage 
 
-## DATA ANALYTICS WORKFLOW
+o	Current 
 
-```text
-Data Collection
-       ↓
-Data Understanding
-       ↓
-Data Cleaning
-       ↓
-Data Transformation
-       ↓
-Data Analysis
-       ↓
-Interpretation
-       ↓
-Machine Learning
-```
+o	Power usage 
 
-This workflow helps ensure that raw data is properly understood and prepared before applying analytical or machine learning techniques.
+o	Smart-meter readings 
 
----
+•	Healthcare
 
-## RESULT
+o	Heart rate 
 
-Thus, the **dataset and fundamental data analytics concepts were studied successfully** using Python and Pandas. The characteristics of the dataset, different data types, publicly available datasets, real-time datasets, and their applications were analyzed. The dataset was also examined for its structure and suitability for further data analysis and machine learning.
+o	Blood pressure 
+
+o	Temperature 
+
+o	Oxygen level 
+
+•	Weather 
+
+o	Temperature 
+
+o	Humidity 
+
+o	Rainfall 
+
+o	Wind speed 
+
+•	Banking 
+
+o	Transactions 
+
+o	Payments 
+
+o	Account activity
+
+•	E-Commerce 
+
+o	Customer clicks 
+
+o	Product views 
+
+o	Orders 
+
+o	Purchases 
+
+•	Transportation 
+
+o	Vehicle location 
+
+o	Speed 
+
+o	Travel time 
+
+o	Traffic conditions
+
+# Conclusion
+Thus, the dataset and data analytics concepts were studied successfully, including publicly available and real-time datasets and their applications.
+
+](https://github.com/gopudeepika2-eng/Ex.No-3b-DATA-PREPROCESSING/blob/main/README.md)](https://github.com/gopudeepika2-eng/Ex.No-3b-DATA-PREPROCESSING/blob/main/README.md)
